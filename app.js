@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 
+const router = require("express").Router()
+const path = require('path')
+
+
+
 app.set('view engine', 'ejs')
 
 app.use(express.static('public/css'))
