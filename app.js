@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 
+app.set('view engine', 'ejs')
+
+app.use(express.static('public/css'))
 
 app.get('/',(req, res)=>{
-    res.send('Hello World!')
+    res.render('home')
 })
 
 app.get('/about',(req, res)=>{
